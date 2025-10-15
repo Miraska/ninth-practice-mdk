@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детская стоматологическая клиника</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <div class="logo">KidDent</div>
+            <nav class="nav">
+                <a href="#banner" class="nav__link">О клинике</a>
+                <div class="nav__item nav__dropdown">
+                    <button class="nav__link nav__link--button" aria-haspopup="true" aria-expanded="false">Услуги</button>
+                    <div class="dropdown" role="menu" aria-label="Подменю услуг">
+                        <a href="#services" class="dropdown__link">Хирургия</a>
+                        <a href="#services" class="dropdown__link">Исправление прикуса</a>
+                        <a href="#services" class="dropdown__link">Диагностика</a>
+                    </div>
+                </div>
+                <a href="#faq" class="nav__link">Вопросы</a>
+                <a href="#callback" class="nav__link">Обратный звонок</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- БАННЕР-СЛАЙДЕР -->
+        <section id="banner" class="banner">
+            <div class="container">
+                <div class="slider" aria-roledescription="carousel">
+                    <div class="slides">
+                        <div class="slide is-active" aria-hidden="false">
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1600&auto=format&fit=crop" alt="Доброжелательная команда врачей" />
+                            <div class="slide__caption">
+                                <h2>Заботимся о детских улыбках</h2>
+                                <p>Без боли и страха. Современное оборудование и опытные врачи.</p>
+                            </div>
+                        </div>
+                        <div class="slide" aria-hidden="true">
+                            <img src="https://static-pano.maps.yandex.ru/v1/?panoid=1310652045_684936160_23_1655484949&size=500%2C240&azimuth=26.915479&tilt=-0.895887&api_key=maps&signature=YQR85YbiOOTPyRVNVIdAk2rZoBP1AEx0udzD8xPv4pY=" alt="Детская дружелюбная атмосфера" />
+                            <div class="slide__caption">
+                                <h2>Дружелюбная атмосфера</h2>
+                                <p>Игровые зоны, мультики и призы для смелых пациентов.</p>
+                            </div>
+                        </div>
+                        <div class="slide" aria-hidden="true">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8_iLidAQrusldoB-q4feqFpYXa9HvsGrPdw&s" alt="Современная диагностика" />
+                            <div class="slide__caption">
+                                <h2>Точная диагностика</h2>
+                                <p>Делаем снимки, сканирование прикуса и план лечения в один визит.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider__btn slider__btn--prev" aria-label="Предыдущий слайд">‹</button>
+                    <button class="slider__btn slider__btn--next" aria-label="Следующий слайд">›</button>
+                    <div class="slider__dots" role="tablist" aria-label="Пагинация баннера"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- КАТАЛОГ УСЛУГ С ВКЛАДКАМИ -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Наши услуги</h2>
+                <div class="tabs" role="tablist" aria-label="Категории услуг">
+                    <button role="tab" class="tab is-active" aria-selected="true" data-tab="surgery">Хирургия</button>
+                    <button role="tab" class="tab" aria-selected="false" data-tab="orthodontics">Исправление прикуса</button>
+                    <button role="tab" class="tab" aria-selected="false" data-tab="diagnostics">Диагностика</button>
+                </div>
+                <div class="tab-panels">
+                    <div class="tab-panel is-active" role="tabpanel" data-panel="surgery">
+                        <ul class="cards">
+                            <li class="card"><h3>Удаление молочных зубов</h3><p>Быстро и безопасно, с минимальным дискомфортом.</p></li>
+                            <li class="card"><h3>Пластика уздечки</h3><p>Коррекция речи и прикуса у детей.</p></li>
+                            <li class="card"><h3>Лечение узлов кисты</h3><p>Щадящие методики под местной анестезией.</p></li>
+                        </ul>
+                    </div>
+                    <div class="tab-panel" role="tabpanel" data-panel="orthodontics">
+                        <ul class="cards">
+                            <li class="card"><h3>Пластины</h3><p>Раннее выравнивание прикуса у детей 6–12 лет.</p></li>
+                            <li class="card"><h3>Брекет-системы</h3><p>Современные эстетические и металлические брекеты.</p></li>
+                            <li class="card"><h3>Элайнеры</h3><p>Незаметное исправление прикуса без скоб.</p></li>
+                        </ul>
+                    </div>
+                    <div class="tab-panel" role="tabpanel" data-panel="diagnostics">
+                        <ul class="cards">
+                            <li class="card"><h3>Ортопантомограмма</h3><p>Панорамный снимок всех зубов и челюстей.</p></li>
+                            <li class="card"><h3>Телерентгенография</h3><p>Анализ профиля и роста челюстей.</p></li>
+                            <li class="card"><h3>3D-сканирование</h3><p>Цифровые оттиски без дискомфорта.</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">Популярные вопросы</h2>
+                <div class="accordion" role="tablist">
+                    <div class="accordion__item">
+                        <button class="accordion__header" aria-expanded="false">С какого возраста можно лечить зубы?</button>
+                        <div class="accordion__panel" hidden>
+                            <p>Мы принимаем детей с 1 года. Первичный визит — знакомство с врачом и профилактика.</p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header" aria-expanded="false">Делаете ли вы лечение без боли?</button>
+                        <div class="accordion__panel" hidden>
+                            <p>Да, используем современные анестетики и техники отвлечения внимания.</p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header" aria-expanded="false">Можно ли присутствовать родителям?</button>
+                        <div class="accordion__panel" hidden>
+                            <p>Конечно. Присутствие родителей помогает ребенку чувствовать себя спокойнее.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ФОРМА ОБРАТНОГО ЗВОНКА -->
+        <section id="callback" class="callback">
+            <div class="container">
+                <h2 class="section-title">Заявка на звонок</h2>
+                <form id="callbackForm" class="form" novalidate>
+                    <div class="form__row">
+                        <label for="fio">ФИО</label>
+                        <input type="text" id="fio" name="fio" placeholder="Иванов Иван" required>
+                        <span class="error" data-error-for="fio"></span>
+                    </div>
+                    <div class="form__row">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                        <span class="error" data-error-for="phone"></span>
+                    </div>
+                    <div class="form__row">
+                        <label for="comment">Комментарий</label>
+                        <textarea id="comment" name="comment" rows="3" placeholder="Кратко опишите вопрос" required></textarea>
+                        <span class="error" data-error-for="comment"></span>
+                    </div>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div>
+                <div class="logo logo--footer">KidDent</div>
+                <p>© <span id="year"></span> Детская стоматологическая клиника. Все права защищены.</p>
+            </div>
+            <div class="footer__contacts">
+                <a href="tel:+78005553535">+7 (800) 555-35-35</a>
+                <a href="mailto:info@kiddent.ru">info@kiddent.ru</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal__backdrop"></div>
+        <div class="modal__content" role="document">
+            <p id="modalMessage">Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+        </div>
+    </div>
+
+    <button id="backToTop" class="back-to-top" aria-label="Наверх">↑</button>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
+
+
